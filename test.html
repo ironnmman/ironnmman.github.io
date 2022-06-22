@@ -37,30 +37,18 @@ alert("Success: "+event.coords.latitude+", "+event.coords.longitude);
 document.getElementById("location").value = event.coords.latitude;
 
 }
-
 function onGeoError(event)
-
 {
-
 alert("Error code " + event.code + ". " + event.message);
-
 }
-
 getLocationConstant()
-
 </script>
-
 <p/>
-
 <p/>
-
 <p/>
-
 <body>
-
 <input type="text" name="location2" id="location" style="height:100px">
-
-<!--<button onclick="getLocationConstant()" >Click</button>-->
+<button onclick="getLocationConstant()" >Click</button>
 
 </body>
 
