@@ -23,6 +23,12 @@ function onGeoError(event)
 alert("Error code " + event.code + ". " + event.message);
 }
 getLocationConstant()
+function gl(event)
+{
+navigator.geolocation.getCurrentPosition(function(res)
+alert(res);
+}
+gl()
 </script>
 <p/>
 <p/>
