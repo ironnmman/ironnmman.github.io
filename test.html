@@ -1,41 +1,22 @@
 <html>
-
 <head>title</head>
-
 <script>
-
 function getLocationConstant()
-
 {
-
 if(navigator.geolocation)
-
 {
-
-//alert("start!");
-
+alert("start!");
 navigator.geolocation.getCurrentPosition(onGeoSuccess,onGeoError);
-
 } else {
-
 alert("No GPS support");
-
 }
-
 }
-
 function onGeoSuccess(event)
-
 {
-
-//alert("success");
-
-//document.getElementById("location").value = event.coords.latitude+", "+event.coords.longitude;
-
+alert("success");
+document.getElementById("location").value = event.coords.latitude+", "+event.coords.longitude;
 alert("Success: "+event.coords.latitude+", "+event.coords.longitude);
-
 document.getElementById("location").value = event.coords.latitude;
-
 }
 function onGeoError(event)
 {
@@ -48,8 +29,7 @@ getLocationConstant()
 <p/>
 <body>
 <input type="text" name="location2" id="location" style="height:100px">
-<button onclick="getLocationConstant()" >Click</button>
-
+<button onclick="getLocationConstant()">Click</button>
+<button onclick="onGeoSuccess()">Click2</button>
 </body>
-
 </html>
