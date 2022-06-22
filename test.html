@@ -28,7 +28,6 @@ function gl(event)
 navigator.geolocation.getCurrentPosition(function(res)
 alert(res);
 }
-gl()
 </script>
 <p/>
 <p/>
@@ -37,5 +36,6 @@ gl()
 <input type="text" name="location2" id="location" style="height:100px">
 <button onclick="getLocationConstant()">Click</button>
 <button onclick="onGeoSuccess()">Click2</button>
+<button onclick="gl()">Click3</button>
 </body>
 </html>
