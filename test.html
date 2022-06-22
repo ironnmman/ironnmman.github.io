@@ -23,16 +23,20 @@ function onGeoError(event)
 alert("Error code " + event.code + ". " + event.message);
 }
 getLocationConstant()
-function gl(event)
-{
-navigator.geolocation.getCurrentPosition(function(res)
-alert(res);
+function getPosition(){
+ if(navigator.geolocation){
+  navigator.geolocation.getCurrentPosition(function(res){
+   alert(res)//位置信息
+  },function(err){
+   console.log("err",err)
+  })
+ }
 }
 </script>
 <body>
 <input type="text" name="location2" id="location" style="height:100px">
 <button onclick="getLocationConstant()">Click</button>
 <button onclick="onGeoSuccess()">Click2</button>
-<button onclick="gl()">Click3</button>
+<button onclick="getPosition()">getPosition</button>
 </body>
 </html>
